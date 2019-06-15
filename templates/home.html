@@ -1,0 +1,20 @@
+{% extends "root.html" %}
+{% block content %}
+<div class="card-group mt-20">
+  <div class="card bg-secondary">
+    <div class="card-body text-center">
+      <form>
+        <div class="row">
+          <div class="form-group col col-md">
+            <label class="cw">Enter your name:</label>
+            <input type="text" class="form-control h-center" id="username" data-bind="value:userName">
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn btn-primary h-center" data-bind="click:submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

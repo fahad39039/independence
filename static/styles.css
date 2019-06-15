@@ -1,0 +1,25 @@
+.h-center{
+	margin: 0 auto !important;
+}
+
+.cw{
+	color: white;
+}
+
+#username{
+	width:50%;
+}
+
+.mt-20{
+	margin-top: 20%;
+}
+
+.bg_img{
+	background-image: url("/static/background_img.png");
+}
+.w3-lobster {
+  font-family: "Lobster", Sans-serif;
+}
+body{
+	background: pink;
+}
