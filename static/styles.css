@@ -14,6 +14,9 @@
 	margin-top: 20%;
 }
 
+.mt-30{
+	margin-top: 30px;
+}
 .bg_img{
 	background-image: url("/static/background_img.png");
 }
