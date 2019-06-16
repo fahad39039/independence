@@ -1,6 +1,9 @@
 var ViewModel = function(){
 	var self = this;
 	self.userName = ko.observable("");
+	self.getUrl = ko.observable(false);
+	self.myUrl = ko.observable("");
+	self.showMsg = ko.observable(false);
 	self.submit = function(){
 		var user_data = {
 			"name": self.userName()
@@ -13,13 +16,20 @@ var ViewModel = function(){
 			dataType: 'json',
 			contentType: 'appliaction/json',
 			success: function(response){
-				window.location = "/"+user_data['name'];
+				self.getUrl(true);
+				self.myUrl(window.location['href']+user_data['name']);
 				console.log(response);
 			},
 			error: function(error) {
 				// body...
 			}
 		})
+	}
+	self.copyUrl = function(){
+		copyText = document.getElementById("url");
+		copyText.select();
+		document.execCommand("copy");
+		self.showMsg(true);
 	}
 }
 
