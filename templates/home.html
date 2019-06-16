@@ -1,19 +1,34 @@
 {% extends "root.html" %}
 {% block content %}
-<div class="card-group mt-20">
-  <div class="card bg-secondary">
-    <div class="card-body text-center">
-      <form>
-        <div class="row">
-          <div class="form-group col col-md">
-            <label class="cw">Enter your name:</label>
-            <input type="text" class="form-control h-center" id="username" data-bind="value:userName">
+<div class="container">
+  <div class="card-group mt-20">
+    <div class="card bg-secondary">
+      <div class="card-body text-center">
+        <form>
+          <div data-bind="visible:getUrl()==false">
+            <div class="row">
+              <div class="form-group col col-md">
+                <label class="cw">Enter your name:</label>
+                <input type="text" class="form-control h-center" id="username" data-bind="value:userName">
+              </div>
+            </div>
+            <div class="row">
+              <button type="submit" class="btn btn-primary h-center" data-bind="click:submit">Submit</button>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <button type="submit" class="btn btn-primary h-center" data-bind="click:submit">Submit</button>
-        </div>
-      </form>
+          <div class="row" data-bind="visible:getUrl">
+            <div class="input-group col-6 h-center">
+              <input type="text" class="form-control" id="url" data-bind="value:myUrl">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" data-bind="click:copyUrl">Copy Url</button>
+              </div>
+            </div>
+          </div>
+          <div class="cw mt-30" data-bind="visible:showMsg">
+              <h6>Link Copied!!!</h6>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
