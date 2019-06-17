@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
+  <title>Independence Day Wishes</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independence Day wishes are here!">
+  <meta property="og:title" content="Independence Day Wishes">
+  <meta property="og:description" content="Independence Day wishes are here!">
+  <meta property="og:image" content="{{url_for('static',filename='flag.jpg')}}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,11 +18,8 @@
   <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body> 
- 
-<div class="container">
   {% block content %}
   {% endblock %}
-</div>
 <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 </body>
 </html>
